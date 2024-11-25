@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="Flash",
+    name="QuickFlash",
     version="0.1.0",
     author="Reuel Bodhak",
     author_email="reuelbodhak07@gmail.com",
