@@ -203,7 +203,10 @@ class Flash:
 
         async def next_middleware(index=0):
             if index < len(self.middleware):
-                await self.middleware[index](req, res, lambda: next_middleware(index + 1))
+                if asyncio.iscoroutinefunction(self.middleware):
+                    await self.middleware[index](req, res, lambda: next_middleware(index + 1))
+                else:
+                    self.middleware[index](req, res, lambda:asyncio.create_task(next_middleware(index + 1)))
             else:
                 await self.routeRequest(method, path, req, res)
 
