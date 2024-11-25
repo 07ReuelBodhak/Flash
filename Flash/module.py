@@ -50,11 +50,9 @@ class Response:
             "\r\n"
         )
         
-        print(f"Raw Response:\n{response_headers}{content}")
-        
         try:
-            self.writer.write(response_headers.encode())  # Write headers
-            self.writer.write(content.encode())           # Write body
+            self.writer.write(response_headers.encode()) 
+            self.writer.write(content.encode())       
         except Exception as e:
             print(f"Error sending response: {e}")
         finally:
