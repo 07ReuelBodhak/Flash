@@ -49,9 +49,7 @@ class Response:
             f"Content-Length: {len(content.encode())}\r\n"
             "\r\n"
         )
-        
-        print(f"Raw Response:\n{response_headers}{content}")
-        
+                
         try:
             self.writer.write(response_headers.encode())  # Write headers
             self.writer.write(content.encode())           # Write body
