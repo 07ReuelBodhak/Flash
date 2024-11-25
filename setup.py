@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="QuickFlash",
-    version="0.1.0",
+    version="0.1.1",
     author="Reuel Bodhak",
     author_email="reuelbodhak07@gmail.com",
     description="Flash is a lightweight Python web framework inspired by Express.js. It enables developers to build scalable and efficient web applications with minimal setup, featuring an intuitive syntax, middleware support, and flexible routing. Designed for simplicity and productivity, Flash is perfect for developers looking to create robust back-end solutions in Python.",
